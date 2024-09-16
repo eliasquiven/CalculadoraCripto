@@ -62,6 +62,3 @@ Este projeto está licenciado sob a licença MIT.
 📄 Notas
 Aviso: Esta ferramenta é para fins educacionais e de planejamento financeiro. Não deve ser usada como única fonte para decisões de investimento.
 Dados: Os dados são fornecidos pela API da CoinGecko e estão sujeitos a limitações e atrasos.
-
-📧 Contato
-Para perguntas ou suporte, entre em contato pelo e-mail: eliasquiven@gmail.com
