@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Lucro em Criptomoedas</title>
+    <!-- Inclua a biblioteca Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link para a fonte do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Lucro em Criptomoedas</h1>
+        <form id="investmentForm">
+            <div class="form-group">
+                <label for="crypto">Criptomoeda:</label>
+                <select name="crypto" id="crypto" required>
+                    <!-- As opções serão carregadas dinamicamente -->
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="currency">Moeda:</label>
+                <select name="currency" id="currency" required>
+                    <option value="brl">BRL (Real)</option>
+                    <option value="usd">USD (Dólar)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="investment">Valor Investido (BRL):</label>
+                <input type="number" step="0.01" name="investment" id="investment" required>
+            </div>
+
+            <!-- Modificado o campo para taxas como valor -->
+            <div class="form-group">
+                <label for="fees">Taxas de Negociação (Valor):</label>
+                <input type="number" step="0.01" name="fees" id="fees" value="0" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fromDate">Data Inicial (De):</label>
+                <input type="date" name="fromDate" id="fromDate">
+            </div>
+
+            <div class="form-group">
+                <label for="toDate">Data Final (Até):</label>
+                <input type="date" name="toDate" id="toDate" required>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Calcular" class="btn">
+            </div>
+        </form>
+
+        <div class="chart-container">
+            <!-- Primeiro gráfico: Preço da Criptomoeda -->
+            <canvas id="priceChart"></canvas>
+            <!-- Segundo gráfico: Valor do Investimento -->
+            <canvas id="investmentChart"></canvas>
+        </div>
+
+        <div id="results"></div>
+    </div>
+
+    <!-- Link para o arquivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
